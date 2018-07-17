@@ -5,10 +5,10 @@
 replicaCount: 2
 
 image:
-  repository: registry.ng.bluemix.net/<NAMESPACE> # Ex: registry.ng.bluemix.net/mynamespace
+  repository: registry.ng.bluemix.net/davewakeman # Ex: registry.ng.bluemix.net/mynamespace
   pullPolicy: Always
 
 ingress:
   enabled: true
   hosts:
-    - jpetstore.<Ingress Subdomain> # Ex: jpetstore.myclustername.us-south.containers.mybluemix.net
+    - jpetstore.dw-petstore-03.us-south.containers.appdomain.cloud # Ex: jpetstore.myclustername.us-south.containers.mybluemix.net

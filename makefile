@@ -1,8 +1,8 @@
 # update based on your IBM Container Registry namespace
-NAMESPACE=<YOUR_CONTAINER_REGISTRY>
+NAMESPACE=davewakeman
 
 # update based on your Ingress Subdomain (use `ibmcloud cs cluster-get <CLUSTERNAME>` to obtain)
-INGRESSSUBDOMAIN=jpetstore.<YOUR_INGRESS_SUBDOMAIN>
+INGRESSSUBDOMAIN=jpetstore.dw-petstore-03.us-south.containers.appdomain.cloud
 
 # the IBM container registry
 REGISTRY=registry.ng.bluemix.net
