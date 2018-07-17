@@ -42,3 +42,13 @@ rolling-update:
 	cd mmssearch && docker build . -t $(REGISTRY)/$(NAMESPACE)/mmssearch
 	docker push $(REGISTRY)/$(NAMESPACE)/mmssearch
 	kubectl patch deployment mmssearch-mmssearch -p '{"spec":{"template":{"metadata":{"annotations":{"date":$(TIMESTAMP)}}}}}'
+
+scale-up:
+	kubectl scale --replicas=6 deployment jpetstore-modernpets-jpetstoreweb
+	kubectl rollout status deployment jpetstore-modernpets-jpetstoreweb
+	kubectl get po -l app=modernpets-jpetstoreweb
+
+scale-down:
+	kubectl scale --replicas=2 deployment jpetstore-modernpets-jpetstoreweb
+	kubectl rollout status deployment jpetstore-modernpets-jpetstoreweb
+	kubectl get po -l app=modernpets-jpetstoreweb
